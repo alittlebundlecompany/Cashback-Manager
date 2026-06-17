@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashback Manager — App per iPhone</title>
+    <meta name="description" content="Cashback Manager: l'app per iPhone che ti aiuta a tenere traccia di tutti i tuoi rimborsi promozionali.">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --accent: #007aff;
+            --text: #1c1c1e;
+            --text-secondary: #6e6e73;
+            --bg: #ffffff;
+            --card-bg: #f5f5f7;
+            --border: #d2d2d7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f5f5f7;
+                --text-secondary: #98989d;
+                --bg: #000000;
+                --card-bg: #1c1c1e;
+                --border: #38383a;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 16px 0 8px;
+        }
+        .tagline {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        .cards {
+            display: grid;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 20px 24px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid var(--border);
+            transition: transform 0.1s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        .card h2 {
+            margin: 0 0 4px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .arrow {
+            color: var(--text-secondary);
+            font-size: 20px;
+        }
+        footer {
+            margin-top: 64px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">💳</div>
+            <h1>Cashback Manager</h1>
+            <p class="tagline">L'app per non perdere mai un rimborso</p>
+        </header>
+
+        <main class="cards">
+            <a class="card" href="privacy.html">
+                <div>
+                    <h2>🔒 Informativa sulla privacy</h2>
+                    <p>Come gestiamo i tuoi dati (spoiler: restano sul tuo iPhone)</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="card" href="terms.html">
+                <div>
+                    <h2>📄 Termini di servizio</h2>
+                    <p>Le condizioni d'uso dell'app</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="card" href="mailto:alittlebundlecompany@gmail.com">
+                <div>
+                    <h2>✉️ Contattaci</h2>
+                    <p>alittlebundlecompany@gmail.com</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2026 Laura Rubbuano · Sviluppato con ❤️ per iOS</p>
+        </footer>
+    </div>
+</body>
+</html>
