@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apri in Cashback Manager</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; text-align: center;
+         padding: 48px 24px; color: #222; background: #f7f7f9; }
+  .card { max-width: 420px; margin: 0 auto; background: #fff; border-radius: 16px;
+          padding: 32px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+  h1 { font-size: 1.3em; }
+  a.btn { display: inline-block; margin-top: 16px; padding: 12px 28px; background: #1c69f2;
+          color: #fff; border-radius: 10px; text-decoration: none; font-weight: 600; }
+  p.small { color: #777; font-size: .85em; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>💶 Cashback condiviso</h1>
+  <p>Qualcuno ti ha condiviso un cashback da importare in <strong>Cashback Manager</strong>.</p>
+  <a class="btn" id="openBtn" href="#">Apri nell'app</a>
+  <p class="small">Non hai l'app? <a href="https://apps.apple.com/app/id6785580652">Scaricala dall'App Store</a>.</p>
+</div>
+<script>
+  var data = new URLSearchParams(window.location.search).get('data') || '';
+  var appLink = 'cashbackmanager://import?data=' + encodeURIComponent(data);
+  document.getElementById('openBtn').href = appLink;
+  // Tentativo di apertura automatica: se l'app è installata, iOS chiede di aprirla.
+  if (data) { window.location.href = appLink; }
+</script>
+</body>
+</html>
