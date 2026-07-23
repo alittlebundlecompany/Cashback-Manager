@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativa sulla privacy (Android) — Cashback Manager</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --accent: #007aff;
+            --text: #1c1c1e;
+            --text-secondary: #6e6e73;
+            --bg: #ffffff;
+            --card-bg: #f5f5f7;
+            --border: #d2d2d7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f5f5f7;
+                --text-secondary: #98989d;
+                --bg: #000000;
+                --card-bg: #1c1c1e;
+                --border: #38383a;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+        .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 15px; margin-bottom: 24px; }
+        .platform-note { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; font-size: 14px; color: var(--text-secondary); margin: 0 0 24px; }
+        .platform-note a { color: var(--accent); text-decoration: none; }
+        h1 { font-size: 32px; font-weight: 700; margin: 0 0 8px; }
+        h2 { font-size: 20px; font-weight: 600; margin: 32px 0 8px; }
+        .updated { color: var(--text-secondary); font-size: 14px; margin: 0 0 32px; }
+        p, ul { color: var(--text); margin: 0 0 12px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 6px; }
+        a { color: var(--accent); text-decoration: none; }
+        footer { margin-top: 64px; text-align: center; font-size: 13px; color: var(--text-secondary); border-top: 1px solid var(--border); padding-top: 24px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back" href="index.html">← Home</a>
+        <h1>Informativa sulla privacy</h1>
+        <p class="updated">Ultimo aggiornamento: 23 luglio 2026</p>
+        <p class="platform-note">Questa pagina descrive la versione <strong>Android</strong> di Cashback Manager. Per la versione iPhone, vedi <a href="privacy.html">l'informativa iOS</a>.</p>
+
+        <p>Cashback Manager (di seguito "l'app") rispetta la tua privacy. Tutti i dati che inserisci restano esclusivamente sul tuo dispositivo. Non gestiamo server, non creiamo profili utente e non raccogliamo dati di analytics. L'unica eccezione è la pubblicità gestita da Google AdMob, descritta più sotto in un'apposita sezione.</p>
+
+        <h2>Titolare del trattamento</h2>
+        <p>Il titolare del trattamento è <strong>Vladimir Maiorano</strong>, contattabile all'indirizzo <a href="mailto:alittlebundlecompany@gmail.com">alittlebundlecompany@gmail.com</a>. L'app è distribuita tramite Google Play Store (nome pacchetto: <code>it.vladimaio.Cashback</code>).</p>
+
+        <h2>Dati memorizzati localmente sul dispositivo</h2>
+        <p>L'app salva sul tuo dispositivo Android, in un database locale non accessibile da altre app:</p>
+        <ul>
+            <li>L'elenco dei cashback con: nome, prodotto/marca, prezzo, date di registrazione e rimborso, stato (in attesa, ricevuto, non ricevuto), note.</li>
+            <li>Parametri di calcolo della scadenza: quantità, unità (giorni o mesi), flag giorni lavorativi.</li>
+            <li>Foto e file allegati (fronte/retro scontrino) salvati nell'area riservata dell'app.</li>
+            <li>Identificatori interni degli eventi creati nel Calendario Android quando attivi la sincronizzazione.</li>
+            <li>Preferenze: tema (chiaro/scuro/sistema), valuta preferita, orario notifiche, giorni di anticipo, lingua, ecc.</li>
+            <li>Stato dell'onboarding (per non mostrarlo ad ogni avvio).</li>
+            <li>Contatore giornaliero degli annunci interstitial visualizzati (azzerato a mezzanotte).</li>
+        </ul>
+        <p>Nessuna di queste informazioni viene mai inviata fuori dal tuo dispositivo verso server gestiti dallo sviluppatore o da terze parti diverse da quelle indicate nella sezione "Pubblicità".</p>
+
+        <h2>Permessi di sistema richiesti</h2>
+        <ul>
+            <li><strong>Fotocamera</strong>: solo quando scegli di scattare la foto di uno scontrino.</li>
+            <li><strong>Foto e file multimediali</strong>: solo quando scegli di allegare una foto o un documento esistente.</li>
+            <li><strong>Calendario</strong>: solo se attivi la sincronizzazione delle scadenze.</li>
+            <li><strong>Notifiche</strong>: solo se attivi i promemoria di scadenza o la notifica permanente della prossima scadenza.</li>
+        </ul>
+        <p>Ogni permesso viene richiesto solo quando serve, e puoi revocarlo in qualsiasi momento dalle Impostazioni di Android.</p>
+
+        <h2>Pubblicità (Google AdMob)</h2>
+        <p>L'app include:</p>
+        <ul>
+            <li>Un <strong>banner pubblicitario</strong> fisso nella schermata principale, sotto al riepilogo statistiche.</li>
+            <li>Un <strong>annuncio a schermo intero</strong> (interstitial) che appare a partire dalla terza aggiunta di un cashback nello stesso giorno, e poi per ogni aggiunta successiva. Il contatore si azzera a mezzanotte.</li>
+        </ul>
+        <p>Gli annunci sono forniti da <strong>Google AdMob</strong>, che è un titolare autonomo del trattamento. Google può raccogliere:</p>
+        <ul>
+            <li>L'identificatore pubblicitario del dispositivo Android (Google Advertising ID).</li>
+            <li>La posizione geografica approssimativa.</li>
+            <li>Dati di interazione con gli annunci (visualizzazioni, click, durata).</li>
+            <li>Informazioni tecniche sul dispositivo (modello, OS, lingua, fuso orario).</li>
+        </ul>
+        <p>Al primo avvio, se ti trovi nello Spazio Economico Europeo o nel Regno Unito, l'app ti mostra il modulo di consenso di Google (<strong>User Messaging Platform</strong>) per scegliere se consentire annunci personalizzati. Puoi rivedere e modificare la tua scelta in qualsiasi momento da <em>Impostazioni → Gestisci consenso annunci</em> all'interno dell'app.</p>
+        <p>Informativa completa di Google:</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank">Informativa sulla privacy di Google</a></li>
+            <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google EU User Consent / Partner Network</a></li>
+            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Family Policy</a></li>
+        </ul>
+
+        <h2>Backup ed esportazione</h2>
+        <p>La funzione "Esporta backup" produce un file JSON con tutti i dati dei tuoi cashback (senza i file allegati binari) e ti permette di salvarlo dove preferisci (Google Drive, file locali, condivisione, ecc.). La funzione "Importa backup" ripristina i dati da un file precedentemente esportato. Il trasferimento è gestito interamente da Android e dai servizi che scegli — l'app non comunica con server propri.</p>
+
+        <h2>Feedback via email</h2>
+        <p>Se invii feedback dalla sezione "Feedback" delle Impostazioni, viene aperto il client email predefinito del tuo dispositivo, precompilato con destinatario, oggetto, messaggio e meta-informazioni utili (versione app, versione Android, modello dispositivo). L'email viene inviata dal tuo account, non dall'app. Il messaggio arriva a <a href="mailto:alittlebundlecompany@gmail.com">alittlebundlecompany@gmail.com</a> e viene gestito esclusivamente per rispondere alla tua richiesta.</p>
+
+        <h2>Widget, notifiche e scelte rapide</h2>
+        <p>Il widget nella schermata Home e la notifica permanente sulla prossima scadenza leggono gli stessi dati locali del dispositivo, senza alcuna trasmissione esterna. Le scelte rapide dell'app (accessibili tenendo premuta l'icona) non raccolgono dati aggiuntivi.</p>
+
+        <h2>Notifiche locali</h2>
+        <p>Le notifiche di promemoria scadenza sono completamente locali, programmate dall'app sul tuo dispositivo all'orario che scegli. Non utilizziamo notifiche push da server remoti.</p>
+
+        <h2>Lingue supportate</h2>
+        <p>La versione Android dell'app è disponibile in italiano e inglese; la lingua viene determinata automaticamente in base alle preferenze di sistema del dispositivo — nessun dato sulla lingua viene trasmesso a terzi.</p>
+
+        <h2>Trasferimenti internazionali</h2>
+        <p>I dati raccolti da Google AdMob possono essere trasferiti e trattati in paesi al di fuori dell'Unione Europea, secondo le garanzie previste dal GDPR e dalle policy di Google.</p>
+
+        <h2>Diritti dell'utente (GDPR)</h2>
+        <p>In quanto utente europeo, hai diritto di:</p>
+        <ul>
+            <li>Accedere ai tuoi dati (sono tutti sul tuo dispositivo, accessibili dall'app stessa).</li>
+            <li>Rettificarli (modifica o elimina i cashback direttamente dall'app).</li>
+            <li>Cancellarli (disinstallando l'app o usando "Elimina tutto").</li>
+            <li>Esercitare i diritti relativi alla pubblicità tramite il modulo di consenso o da Impostazioni → Gestisci consenso annunci.</li>
+            <li>Presentare reclamo al Garante Privacy italiano (<a href="https://www.garanteprivacy.it" target="_blank">garanteprivacy.it</a>).</li>
+        </ul>
+
+        <h2>Minori</h2>
+        <p>L'app non è progettata specificamente per utenti di età inferiore a 13 anni. La pubblicità è gestita secondo le policy AdMob per pubblico generale e non per bambini.</p>
+
+        <h2>Eliminazione dei dati</h2>
+        <p>Per eliminare tutti i tuoi dati basta disinstallare l'app: Android rimuove automaticamente i dati associati. In alternativa, puoi usare le funzioni "Elimina" e "Elimina tutto" all'interno dell'app.</p>
+
+        <h2>Modifiche all'informativa</h2>
+        <p>Eventuali aggiornamenti saranno pubblicati su questa pagina con una nuova data di aggiornamento e riflessi nella schermata "Privacy" all'interno dell'app. L'uso continuato dell'app dopo le modifiche costituisce accettazione delle stesse.</p>
+
+        <h2>Contatti</h2>
+        <p>Per qualsiasi domanda o per esercitare i tuoi diritti scrivi a <a href="mailto:alittlebundlecompany@gmail.com">alittlebundlecompany@gmail.com</a>. Risponderemo entro 30 giorni come previsto dal GDPR.</p>
+
+        <footer>
+            © 2026 Vladimir Maiorano
+        </footer>
+    </div>
+</body>
+</html>
