@@ -13,21 +13,73 @@
   a.btn { display: inline-block; margin-top: 16px; padding: 12px 28px; background: #1c69f2;
           color: #fff; border-radius: 10px; text-decoration: none; font-weight: 600; }
   p.small { color: #777; font-size: .85em; margin-top: 20px; }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 <div class="card">
   <h1>💶 Cashback condiviso</h1>
   <p>Qualcuno ti ha condiviso un cashback da importare in <strong>Cashback Manager</strong>.</p>
-  <a class="btn" id="openBtn" href="#">Apri nell'app</a>
-  <p class="small">Non hai l'app? <a href="https://apps.apple.com/app/id6785580652">Scaricala dall'App Store</a>.</p>
+  <a class="btn" id="openBtn" href="#" hidden>Apri nell’app</a>
+  <p class="small" id="message" role="status"></p>
+  <p class="small">Non hai l’app?</p>
+  <p id="androidStore"><a href="https://play.google.com/store/apps/details?id=it.vladimaio.Cashback">Scaricala da Google Play</a></p>
+  <p id="iosStore"><a href="https://apps.apple.com/app/id6785580652">Scaricala dall’App Store</a></p>
+  <p class="small">Dopo aver installato l’app, apri nuovamente il link condiviso per importare il cashback.</p>
 </div>
 <script>
+(function () {
+  'use strict';
+  var playStore = 'https://play.google.com/store/apps/details?id=it.vladimaio.Cashback';
+  var appStore = 'https://apps.apple.com/app/id6785580652';
+  var android = /Android/i.test(navigator.userAgent);
+  var ios = /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  document.getElementById('androidStore').hidden = ios;
+  document.getElementById('iosStore').hidden = android;
   var data = new URLSearchParams(window.location.search).get('data') || '';
+  var button = document.getElementById('openBtn');
+  var message = document.getElementById('message');
+  if (!data || !/^[A-Za-z0-9_+\/-]+={0,2}$/.test(data)) {
+    message.textContent = 'Il link non contiene un cashback valido. Chiedi di condividerlo nuovamente.';
+    return;
+  }
   var appLink = 'cashbackmanager://import?data=' + encodeURIComponent(data);
-  document.getElementById('openBtn').href = appLink;
-  // Tentativo di apertura automatica: se l'app è installata, iOS chiede di aprirla.
-  if (data) { window.location.href = appLink; }
+  // Chrome uses the store fallback only if no app can handle this intent.
+  var androidLink = 'intent://import?data=' + encodeURIComponent(data) +
+    '#Intent;scheme=cashbackmanager;package=it.vladimaio.Cashback;' +
+    'S.browser_fallback_url=' + encodeURIComponent(playStore) + ';end';
+  button.href = android ? androidLink : appLink;
+  button.hidden = false;
+  message.textContent = 'Se l’app non si apre automaticamente, premi “Apri nell’app”.';
+  var fallbackTimer;
+  var appOpened = false;
+  function stopFallback() {
+    appOpened = true;
+    clearTimeout(fallbackTimer);
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) stopFallback();
+  });
+  window.addEventListener('pagehide', stopFallback);
+  function openApp() {
+    clearTimeout(fallbackTimer);
+    appOpened = false;
+    if (ios) {
+      // Safari does not expose an installed-app check. Cancel this fallback as
+      // soon as the page is hidden so returning from the app won't open the store.
+      fallbackTimer = setTimeout(function () {
+        if (!appOpened && !document.hidden) window.location.href = appStore;
+      }, 2500);
+    }
+    window.location.href = android ? androidLink : appLink;
+  }
+  button.addEventListener('click', function (event) {
+    event.preventDefault();
+    openApp();
+  });
+  if (android || ios) openApp();
+})();
 </script>
 </body>
 </html>
