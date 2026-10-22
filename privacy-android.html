@@ -50,7 +50,7 @@
     <div class="container">
         <a class="back" href="index.html">← Home</a>
         <h1>Informativa sulla privacy</h1>
-        <p class="updated">Ultimo aggiornamento: 23 luglio 2026</p>
+        <p class="updated">Ultimo aggiornamento: 22 ottobre 2026</p>
         <p class="platform-note">Questa pagina descrive la versione <strong>Android</strong> di Cashback Manager. Per la versione iPhone, vedi <a href="privacy.html">l'informativa iOS</a>.</p>
 
         <p>Cashback Manager (di seguito "l'app") rispetta la tua privacy. Tutti i dati che inserisci restano esclusivamente sul tuo dispositivo. Non gestiamo server, non creiamo profili utente e non raccogliamo dati di analytics. L'unica eccezione è la pubblicità gestita da Google AdMob, descritta più sotto in un'apposita sezione.</p>
@@ -67,7 +67,7 @@
             <li>Identificatori interni degli eventi creati nel Calendario Android quando attivi la sincronizzazione.</li>
             <li>Preferenze: tema (chiaro/scuro/sistema), valuta preferita, orario notifiche, giorni di anticipo, lingua, ecc.</li>
             <li>Stato dell'onboarding (per non mostrarlo ad ogni avvio).</li>
-            <li>Contatore giornaliero degli annunci interstitial visualizzati (azzerato a mezzanotte).</li>
+            <li>Contatore giornaliero dei cashback aggiunti, usato per determinare quando proporre gli annunci interstitial (azzerato a mezzanotte).</li>
         </ul>
         <p>Nessuna di queste informazioni viene mai inviata fuori dal tuo dispositivo verso server gestiti dallo sviluppatore o da terze parti diverse da quelle indicate nella sezione "Pubblicità".</p>
 
@@ -88,17 +88,19 @@
         </ul>
         <p>Gli annunci sono forniti da <strong>Google AdMob</strong>, che è un titolare autonomo del trattamento. Google può raccogliere:</p>
         <ul>
-            <li>L'identificatore pubblicitario del dispositivo Android (Google Advertising ID).</li>
-            <li>La posizione geografica approssimativa.</li>
-            <li>Dati di interazione con gli annunci (visualizzazioni, click, durata).</li>
+            <li>L'identificatore pubblicitario Android (Google Advertising ID), l'App Set ID e altri identificativi del dispositivo previsti dall'SDK. L'identificatore pubblicitario può essere reimpostato o eliminato nelle impostazioni Android.</li>
+            <li>L'indirizzo IP, utilizzabile per stimare la posizione geografica approssimativa; non viene richiesta la posizione GPS precisa per la pubblicità.</li>
+            <li>Dati di interazione con l'app e gli annunci, come avvii, tocchi e visualizzazioni di video.</li>
+            <li>Dati diagnostici e sulle prestazioni dell'app e dell'SDK, come tempi di avvio, blocchi e consumo energetico.</li>
             <li>Informazioni tecniche sul dispositivo (modello, OS, lingua, fuso orario).</li>
         </ul>
-        <p>Al primo avvio, se ti trovi nello Spazio Economico Europeo o nel Regno Unito, l'app ti mostra il modulo di consenso di Google (<strong>User Messaging Platform</strong>) per scegliere se consentire annunci personalizzati. Puoi rivedere e modificare la tua scelta in qualsiasi momento da <em>Impostazioni → Gestisci consenso annunci</em> all'interno dell'app.</p>
+        <p>Google raccoglie e condivide questi dati per pubblicità, analisi e prevenzione delle frodi. I dati trasmessi dall'SDK Google Mobile Ads sono criptati in transito tramite TLS. Le modalità di raccolta dipendono anche dalle impostazioni del dispositivo, dalle scelte di consenso e dal tipo di annunci erogati. Lo sviluppatore non riceve i tuoi scontrini o i dettagli dei cashback tramite AdMob.</p>
+        <p>Al primo avvio, se ti trovi nello Spazio Economico Europeo, nel Regno Unito o in Svizzera, l'app ti mostra il modulo di consenso di Google (<strong>User Messaging Platform</strong>) per scegliere se consentire annunci personalizzati. Puoi rivedere e modificare la tua scelta in qualsiasi momento da <em>Impostazioni → Gestisci consenso annunci</em> all'interno dell'app.</p>
         <p>Informativa completa di Google:</p>
         <ul>
             <li><a href="https://policies.google.com/privacy" target="_blank">Informativa sulla privacy di Google</a></li>
             <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google EU User Consent / Partner Network</a></li>
-            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Family Policy</a></li>
+            <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Dati raccolti e condivisi da Google Mobile Ads</a></li>
         </ul>
 
         <h2>Backup ed esportazione</h2>
@@ -114,7 +116,7 @@
         <p>Le notifiche di promemoria scadenza sono completamente locali, programmate dall'app sul tuo dispositivo all'orario che scegli. Non utilizziamo notifiche push da server remoti.</p>
 
         <h2>Lingue supportate</h2>
-        <p>La versione Android dell'app è disponibile in italiano e inglese; la lingua viene determinata automaticamente in base alle preferenze di sistema del dispositivo — nessun dato sulla lingua viene trasmesso a terzi.</p>
+        <p>La versione Android dell'app è disponibile in italiano e inglese; la lingua viene determinata automaticamente in base alle preferenze di sistema del dispositivo — la selezione della lingua non richiede un account o un server dello sviluppatore. Google AdMob può trattare informazioni tecniche sulla lingua del dispositivo, come descritto nella sezione Pubblicità.</p>
 
         <h2>Trasferimenti internazionali</h2>
         <p>I dati raccolti da Google AdMob possono essere trasferiti e trattati in paesi al di fuori dell'Unione Europea, secondo le garanzie previste dal GDPR e dalle policy di Google.</p>
@@ -133,7 +135,9 @@
         <p>L'app non è progettata specificamente per utenti di età inferiore a 13 anni. La pubblicità è gestita secondo le policy AdMob per pubblico generale e non per bambini.</p>
 
         <h2>Eliminazione dei dati</h2>
-        <p>Per eliminare tutti i tuoi dati basta disinstallare l'app: Android rimuove automaticamente i dati associati. In alternativa, puoi usare le funzioni "Elimina" e "Elimina tutto" all'interno dell'app.</p>
+        <p>Puoi eliminare i cashback e i relativi allegati con le funzioni "Elimina" e "Elimina tutto" nell'app, oppure rimuovere i dati locali dalle impostazioni Android dell'app o disinstallarla. Eventuali copie esportate o backup salvati nei servizi che hai scelto devono essere eliminati separatamente da quei servizi.</p>
+        <p>Per richieste sui dati eventualmente inviati allo sviluppatore, per esempio un'email di feedback, scrivi a <a href="mailto:alittlebundlecompany@gmail.com">alittlebundlecompany@gmail.com</a>, indicando l'app e i dati interessati. Le informazioni sono trattate per gestire la richiesta; eventuali obblighi di conservazione saranno comunicati nella risposta. Lo sviluppatore non dispone di copie dei cashback e degli allegati conservati soltanto sul dispositivo e non può cancellarli da remoto.</p>
+        <p>La cancellazione dei dati locali non elimina automaticamente quelli già trattati da Google per la pubblicità. Per questi dati consulta <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">l'informativa di Google</a> e i relativi strumenti per la privacy; nell'app puoi anche rivedere le scelte di consenso dove richiesto.</p>
 
         <h2>Modifiche all'informativa</h2>
         <p>Eventuali aggiornamenti saranno pubblicati su questa pagina con una nuova data di aggiornamento e riflessi nella schermata "Privacy" all'interno dell'app. L'uso continuato dell'app dopo le modifiche costituisce accettazione delle stesse.</p>
